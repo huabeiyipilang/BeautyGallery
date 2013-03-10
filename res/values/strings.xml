@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="title">泷泽萝拉</string>
+	
+    <string name="app_name">泷泽萝拉</string>
+    
+    <!-- save pic -->
+    <string name="save_error">保存失败</string>
+    <string name="save_to_sd">图片已保存：%s</string>
+    <string name="no_sdcard">请插入SD卡</string>
+
+</resources>
