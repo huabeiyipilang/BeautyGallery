@@ -28,6 +28,7 @@ public class Launcher extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				startActivity(new Intent(Launcher.this,SlideShowActivity.class));
+				finish();
 			}
         	
         });

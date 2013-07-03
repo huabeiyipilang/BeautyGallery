@@ -27,11 +27,35 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
 
+        <FrameLayout
+            android:id="@+id/adview_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <com.baidu.mobads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </com.baidu.mobads.AdView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/click_ads_to_hide"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white"
+            	android:layout_gravity="bottom" />
+        </FrameLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:gravity="right" >
+            android:gravity="right"
+            android:visibility="gone" >
 
             <ImageButton
                 android:id="@+id/button1"
@@ -40,12 +64,5 @@
                 android:src="@drawable/pic_save" />
         </RelativeLayout>
     </FrameLayout>
-
-    <com.baidu.mobads.AdView
-        android:id="@+id/adView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" />
 
 </LinearLayout>

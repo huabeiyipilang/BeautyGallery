@@ -26,14 +26,15 @@ public final class R {
     }
     public static final class id {
         public static final int adView=0x7f070003;
-        public static final int button1=0x7f070002;
-        public static final int description=0x7f070007;
-        public static final int enter=0x7f070008;
+        public static final int adview_container=0x7f070002;
+        public static final int button1=0x7f070004;
+        public static final int description=0x7f070008;
+        public static final int enter=0x7f070009;
         public static final int gallery1=0x7f070001;
-        public static final int gallery_item_img=0x7f070004;
+        public static final int gallery_item_img=0x7f070005;
         public static final int image_container=0x7f070000;
-        public static final int iv_front_cover=0x7f070005;
-        public static final int title=0x7f070006;
+        public static final int iv_front_cover=0x7f070006;
+        public static final int title=0x7f070007;
     }
     public static final class layout {
         public static final int activity_slide_show=0x7f030000;
@@ -42,6 +43,8 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050001;
+        public static final int click_ads_to_hide=0x7f050005;
+        public static final int loading=0x7f050006;
         public static final int no_sdcard=0x7f050004;
         /**  save pic 
          */
