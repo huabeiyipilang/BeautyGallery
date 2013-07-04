@@ -1,4 +1,4 @@
-package cn.kli.beautygallery;
+package cn.kli.historymap;
 
 import java.io.IOException;
 import java.io.InputStream;

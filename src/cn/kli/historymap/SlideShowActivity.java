@@ -1,4 +1,4 @@
-package cn.kli.beautygallery;
+package cn.kli.historymap;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,9 +13,6 @@ import android.app.ProgressDialog;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.HandlerThread;
-import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
@@ -29,8 +26,6 @@ public class SlideShowActivity extends Activity {
 	
 	private final static String PIC_SAVE_PATH = "BeautyGallery";
 	
-	private final static int CMD_INIT = 1;
-	
 	private View mAdsContainer;
 	private GalleryView mGallery;
 	private GalleryAdapter mAdapter;
@@ -38,8 +33,6 @@ public class SlideShowActivity extends Activity {
 	private boolean mShowAd = true;
 	private boolean mAdFirstLoad = true;
 	private ProgressDialog mLoadingDialog;
-	
-	private Handler mHandler = new Handler();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +71,7 @@ public class SlideShowActivity extends Activity {
 			public void onAdClick(JSONObject arg0) {
 				mShowAd = false;
 				mAdsContainer.setVisibility(View.GONE);
+				StatService.onEvent(SlideShowActivity.this, "ads_clicked", mAdapter.getCurrentPicName());
 			}
 
 			@Override
@@ -98,13 +92,10 @@ public class SlideShowActivity extends Activity {
 
 			@Override
 			public void onAdShow(JSONObject arg0) {
-				// TODO Auto-generated method stub
-				
 			}
 
 			@Override
 			public void onAdSwitch() {
-				// TODO Auto-generated method stub
 				
 			}
 
@@ -116,6 +107,30 @@ public class SlideShowActivity extends Activity {
 
 			@Override
 			public void onVideoStart() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onVideoClickAd() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onVideoClickClose() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onVideoClickReplay() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onVideoError() {
 				// TODO Auto-generated method stub
 				
 			}
@@ -197,6 +212,7 @@ public class SlideShowActivity extends Activity {
 	@Override
 	protected void onPause() {
 		super.onPause();
+		StatService.onEvent(SlideShowActivity.this, "quit", mAdapter.getCurrentPicName());
 		StatService.onPause(this);
 	}
 

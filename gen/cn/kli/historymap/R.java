@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package cn.kli.beautygallery;
+package cn.kli.historymap;
 
 public final class R {
     public static final class anim {
@@ -18,11 +18,10 @@ public final class R {
         public static final int aim=0x7f020000;
         public static final int arrow_right_64=0x7f020001;
         public static final int bkg=0x7f020002;
-        public static final int gallery_bg=0x7f020003;
-        public static final int gallery_item_bg=0x7f020004;
-        public static final int gallery_item_bg2=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int pic_save=0x7f020007;
+        public static final int gallery_item_bg=0x7f020003;
+        public static final int gallery_item_bg2=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int pic_save=0x7f020006;
     }
     public static final class id {
         public static final int adView=0x7f070003;

@@ -1,4 +1,4 @@
-package cn.kli.beautygallery;
+package cn.kli.historymap;
 
 import android.content.Context;
 import android.util.AttributeSet;

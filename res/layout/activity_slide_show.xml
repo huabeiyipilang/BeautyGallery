@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <cn.kli.beautygallery.GalleryView
+            <cn.kli.historymap.GalleryView
                 android:id="@+id/gallery1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
@@ -47,7 +47,8 @@
                 android:text="@string/click_ads_to_hide"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@android:color/white"
-            	android:layout_gravity="bottom" />
+            	android:layout_gravity="bottom"
+            	android:background="#66000000" />
         </FrameLayout>
 
         <RelativeLayout

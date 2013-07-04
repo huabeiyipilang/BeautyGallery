@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.kli.beautygallery"
+    package="cn.kli.historymap"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -19,17 +19,17 @@
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
-		<meta-data android:name="BaiduMobAd_APP_ID" android:value="debug" /> 
-		<meta-data android:name="BaiduMobAd_APP_SEC" android:value="debug" />
+		<meta-data android:name="BaiduMobAd_APP_ID" android:value="b50729ec" /> 
+		<meta-data android:name="BaiduMobAd_APP_SEC" android:value="b50729ec" />
 		
         <!-- 渠道商编号，其中name请不要改，将value修改为渠道商编号。渠道名称请到mtj.baidu.com的渠道管理中修改 -->
         <meta-data
             android:name="BaiduMobAd_CHANNEL"
-            android:value="Baidu Market" />
+            android:value="eoe market" />
         <!-- 您从百度网站获取的APP KEY -->
         <meta-data
             android:name="BaiduMobAd_STAT_ID"
-            android:value="9c8bc094d0" />
+            android:value="f9e40565b2" />
 
         <!-- 是否开启错误日志统计，默认为false -->
         <meta-data
@@ -44,16 +44,23 @@
         <!-- 日志仅在wifi网络下发送，默认为false -->
         <meta-data
             android:name="BaiduMobAd_ONLY_WIFI"
-            android:value="true" />
+            android:value="false" />
         <!-- 是否获取基站位置信息，默认为获取基站位置 -->
         <meta-data
             android:name="BaiduMobAd_CELL_LOCATION"
             android:value="true" />
-        
+        <!-- 注册AppActivity -->
+		<activity android:name="com.baidu.mobads.AppActivity" android:configChanges="keyboard|keyboardHidden|orientation" />
+		
         <activity
             android:name=".Launcher"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".SlideShowActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,15 +68,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="SlideShowActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"
-            android:screenOrientation="landscape" >
-        </activity>
-        <activity
-            android:name="net.youmi.android.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation" 
-            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
